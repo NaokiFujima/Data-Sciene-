@@ -8,6 +8,6 @@ df.info()
 df.isna().sum()
 df.duplicated().sum()
 print (df.shape)
-
+print (df.head(3)
 for col in ['rarity', 'weapon', 'element', 'region', 'is_standard_banner', 'is_archon']:
     print (df[col].value_counts(), "\n")
