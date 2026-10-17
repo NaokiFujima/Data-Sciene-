@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 
-DATA_PATH = "Genshin.csv"   # ubah kalau path-mu beda
+DATA_PATH = "Genshin.csv"  
 OUT_DIR = "hasil_grafik"
 os.makedirs(OUT_DIR, exist_ok=True)
 
@@ -17,20 +17,20 @@ y = [2, 4, 6, 8, 10]
 
 plt.plot(x, y)
 plt.savefig(f"{OUT_DIR}/01_dasar.png")
-plt.close()          # tutup grafik supaya tidak menumpuk dengan grafik berikutnya
+plt.close()   
 
 
 
-fig, ax = plt.subplots(figsize=(6, 4))      # figsize = (lebar, tinggi) dalam inci
+fig, ax = plt.subplots(figsize=(6, 4)) 
 
 ax.plot(x, y, color="tab:blue", marker="o", linestyle="--", label="y = 2x")
 ax.set_title("Grafik dasar dengan label")
 ax.set_xlabel("Sumbu X")
 ax.set_ylabel("Sumbu Y")
-ax.legend()                                  # menampilkan label di pojok grafik
+ax.legend()                                  
 ax.grid(True)
 
-fig.tight_layout()                           # merapikan jarak supaya tidak terpotong
+fig.tight_layout()                          
 fig.savefig(f"{OUT_DIR}/02_figure_axes.png", dpi=110)
 plt.close(fig)
 
@@ -53,7 +53,7 @@ fig, ax = plt.subplots(figsize=(7, 4))
 ax.bar(rata.index, rata.values, color="tab:orange")
 ax.set_title("Rata-rata pulled_count per element")
 ax.set_ylabel("Rata-rata pulled_count")
-ax.tick_params(axis="x", rotation=45)        # miringkan label sumbu X
+ax.tick_params(axis="x", rotation=45)
 fig.tight_layout()
 fig.savefig(f"{OUT_DIR}/04_bar_element.png", dpi=110)
 plt.close(fig)
